@@ -1,0 +1,89 @@
+object Form1: TForm1
+  Left = 307
+  Height = 242
+  Top = 118
+  Width = 789
+  Anchors = [akTop, akLeft, akBottom]
+  Caption = 'VISA Test'
+  ClientHeight = 242
+  ClientWidth = 789
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnShow = FormShow
+  LCLVersion = '3.0.0.3'
+  object Memo1: TMemo
+    Left = 239
+    Height = 242
+    Top = 0
+    Width = 550
+    Align = alClient
+    Anchors = [akTop, akLeft, akRight]
+    Lines.Strings = (
+      'Memo1'
+    )
+    TabOrder = 0
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 242
+    Top = 0
+    Width = 234
+    Align = alLeft
+    Caption = 'Panel1'
+    ClientHeight = 242
+    ClientWidth = 234
+    TabOrder = 1
+    object Memo_tx: TMemo
+      Left = 1
+      Height = 201
+      Top = 40
+      Width = 232
+      Align = alBottom
+      Anchors = [akTop, akLeft, akRight]
+      Lines.Strings = (
+        '*IDN?'
+        'INST CH1'
+        'INST CH2'
+        'INST CH3'
+        'INST?'
+        'VOLT 12'
+        'VOLT 5'
+        'outp 1'
+        'outp 0'
+        ''
+        'VOLT?'
+        'MEAS:VOLT?'
+        ''
+        'SYST:ERR?'
+        'SYSTem:VERSion?'
+        'SYSTem:REMote'
+        'SYSTem:LOCal'
+        '*CLS'
+      )
+      ScrollBars = ssVertical
+      TabOrder = 0
+      OnDblClick = Memo_txDblClick
+    end
+    object Button1: TButton
+      Left = 8
+      Height = 25
+      Top = 8
+      Width = 75
+      Caption = 'Button_Read'
+      TabOrder = 1
+      OnClick = Button1Click
+    end
+  end
+  object Splitter1: TSplitter
+    Left = 234
+    Height = 242
+    Top = 0
+    Width = 5
+  end
+  object VisaSession1: TVisaSession
+    ConnectTimeout = 2000
+    Active = False
+    Left = 624
+    Top = 40
+  end
+end
