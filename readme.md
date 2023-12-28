@@ -26,5 +26,7 @@ Once you install package, you will see the component in Lazarus IDE in folder **
 
 pull this project and run by Lazarus.
 
+github link https://github.com/vincentcheng2116/project_visa
+
 
 
