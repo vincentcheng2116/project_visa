@@ -14,7 +14,7 @@ https://vincentcheng.blogspot.com/2023/12/ieee488-scpi-gpib-hpib.html
 ### https://sourceforge.net/projects/lazarus/files/###
 
 [https://sourceforge.net/projects/lazarus/files/Lazarus%20Windows%2064%20bits/Lazarus%203.0/](https://sourceforge.net/projects/lazarus/files/Lazarus%20Windows%2064%20bits/Lazarus%203.0/)
-ad:```
+```
 install lazarus-3.0-fpc-3.2.2-win64.exe first 
 then install lazarus-3.0-fpc-3.2.2-cross-i386-win32-win64.exe
 ```
@@ -26,6 +26,5 @@ Once you install package, you will see the component in Lazarus IDE in folder **
 
 pull this project and run by Lazarus.
 
-enjoy
 
 
