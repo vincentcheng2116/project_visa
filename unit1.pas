@@ -14,6 +14,8 @@ type
 
   TForm1 = class(TForm)
     Button1: TButton;
+    Edit1: TEdit;
+    Label1: TLabel;
     Memo1: TMemo;
     Memo_tx: TMemo;
     Panel1: TPanel;
@@ -30,12 +32,9 @@ type
 
   end;
 
-const
-  ADDRESS = 'GPIB0::15::INSTR';
 
 var
   Form1: TForm1;
-
 
 implementation
 
@@ -66,8 +65,11 @@ end;
 procedure TForm1.FormShow(Sender: TObject);
 var
   s: string;
+  s1:string;
+
 begin
-  VisaSession1.Address := ADDRESS;
+  s1:= Edit1.Text;
+  VisaSession1.Address:=s1;
   VisaSession1.Active := True;
   memo1.Lines.Add(VisaSession1.Query('*IDN?'));
   VisaSession1.Write('*IDN?');
